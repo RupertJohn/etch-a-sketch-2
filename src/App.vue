@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <pixel-container :message="message"></pixel-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import PixelContainer from './components/PixelContainer'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+    data: function() {
+      return {
+        message: "Pass message down"
+      }
+    },
+    components: {
+      'pixel-container': PixelContainer
+    }
   }
-}
 </script>
 
 <style>

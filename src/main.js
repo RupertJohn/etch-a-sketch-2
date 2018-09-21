@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+document.addEventListener('DOMContentLoaded', () => {
+  new Vue({
+    el: '#app',
+    render: h => h(App),
+    data: {
+      message: "How about dat?"
+    }
+  });
+})
