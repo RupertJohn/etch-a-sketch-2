@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <pixel-container :message="message"></pixel-container>
+    <pixel-container :rows="rows"></pixel-container>
+    <input type="number" v-model="rows"></input>
   </div>
 </template>
 
@@ -11,7 +12,7 @@
     name: 'app',
     data: function() {
       return {
-        message: "Pass message down"
+        rows: 0
       }
     },
     components: {
