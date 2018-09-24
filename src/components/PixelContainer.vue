@@ -1,6 +1,6 @@
 <template>
-  <div class="pixelContainer">
-    <div v-for="pixel in pixels">
+  <div id="pixelContainer">
+    <div v-for="n in pixels" :key="n">
       <pixel></pixel>
     </div>
   </div>
@@ -23,8 +23,13 @@
 </script>
 
 <style scoped>
-.pixelContainer {
-  width: 70%;
-  border: 1px solid black;
+#pixelContainer {
+  margin: auto;
+  /* width: 480px; */
+  border: 2px solid red;
+  /* height: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-<style>
+</style>

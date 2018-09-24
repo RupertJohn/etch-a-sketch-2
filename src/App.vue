@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <pixel-container :rows="rows"></pixel-container>
-    <input type="number" v-model="rows"></input>
+    <input type="number" v-model="rows">
   </div>
 </template>
 
@@ -12,7 +12,7 @@
     name: 'app',
     data: function() {
       return {
-        rows: 0
+        rows: 2
       }
     },
     components: {
