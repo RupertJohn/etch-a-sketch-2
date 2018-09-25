@@ -1,20 +1,29 @@
 <template>
-  <div class='pixel'></div>
+  <div class='pixel' v-on:mouseenter="darken" :style="opacityStyle"></div>
 </template>
 
 <script>
   export default {
-
+    props: ['opacity'],
+    computed: {
+      opacityStyle: function() {
+        return {
+          opacity: this.opacity
+        }
+      }
+    },
+    methods: {
+      darken: function() {
+        return this.opacity += 0.1
+      }
+    }
   }
 </script>
 
 <style scoped>
 .pixel {
   background-color: black;
-  /* display: inline-block; */
-  /* float: left; */
-  /* opacity: 0; */
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
 }
 </style>
